@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html ng-app="app">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>angular parallax scroll</title>
+
+    <script src="../angular/angular.js"></script>
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <script src="angular-parallax-scroll.js"></script>
+
+    <script src="app.js"></script>
+
+    <style>
+        .container {
+            margin-top: 500px;
+            height: 1500px;
+        }
+    </style>
+
+  </head>
+
+  <body ng-controller="AppCtrl">
+    <h1>Scroll down</h1>
+    <div class="container">
+        <div parallax-scroll="handler($event)" url="http://stuckincustoms.smugmug.com/Portfolio/i-khJF5DB/0/X3/Trey%20Ratcliff%20-%20China%202011%20-%20A%20Great%20Wall%20at%20Sunset.jpg" style="parallaxStyle" parallax-class="parallaxClass" img-class="imageClass">
+        </div>
+    </div>
+  </body>
+
+</html>
