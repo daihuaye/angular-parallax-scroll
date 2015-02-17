@@ -1,7 +1,7 @@
 angular-parallax-scroll
 =============
 
-Simple parallex effect directives for image content on foreground content scrolling with angular js >= 1.2. ( [Demo]() )
+Simple parallex effect directives for image content on foreground content scrolling with angularJS >= 1.2.x and jQuery >= 1.9.x. ( [Demo](http://embed.plnkr.co/hpScb7rq2FMlFRrmYeh8/preview) )
 
 ## Install
 
