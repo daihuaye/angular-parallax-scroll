@@ -49,29 +49,19 @@ angular.module('app', ['angular.parallaxScroll']);
 
 >
 ```html
-<body ng-controller="AppCtrl">
+  <body ng-controller="AppCtrl">
     <h1>Scroll down</h1>
     <div class="container">
-        <div parallax-scroll="handler($event)" url="http://stuckincustoms.smugmug.com/Portfolio/i-khJF5DB/0/X3/Trey%20Ratcliff%20-%20China%202011%20-%20A%20Great%20Wall%20at%20Sunset.jpg"
-        style="parallaxStyle"
-        parallax-class="parallaxClass"
-        img-class="CustomImage">
+        <div parallax-scroll url="http://stuckincustoms.smugmug.com/Portfolio/i-khJF5DB/0/X3/Trey%20Ratcliff%20-%20China%202011%20-%20A%20Great%20Wall%20at%20Sunset.jpg">
         </div>
     </div>
-</body>
+  </body>
 ```
 
 >
 ```JavaScript
 var app = angular.module('app', [ 'angular.parallaxScroll' ]);
-app.controller('AppCtrl', function AppCtrl($scope) {
-    $scope.handler = function(event) {
-        console.log('callback handler');
-    };
-    $scope.parallaxStyle = {
-        'height': '300px'
-    };
-});
+app.controller('AppCtrl', function AppCtrl($scope) {});
 ```
 
 ## Copyright & License
