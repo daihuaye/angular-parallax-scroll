@@ -81,7 +81,7 @@
 
         function link(scope, element, attr) {
             var parallaxHandler = $parse(attr['parallaxScroll']),
-                cssStyle = $parse(attr['style']),
+                cssStyle = $parse(attr['customStyle']),
                 divClass = attr['parallaxClass'] || '',
                 imgClass = attr['imgClass'] || '',
                 imgDiv = '<div class="parallax"><img src= "' + attr['url'] + '" /></div>"',
