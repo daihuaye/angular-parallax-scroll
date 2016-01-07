@@ -7,8 +7,9 @@
         .directive('parallaxScroll', parallaxScroll);
 
     parallaxService.$inject = ['$window'];
-    parallaxScroll.$inject = ['angular.parallaxScroll.service', '$parse'];
+    parallaxScroll.$inject = ['angular.parallaxScroll.service', '$parse', '$window'];
 
+    /*jshint latedef: nofunc */
     function parallaxService($window) {
         var service = {
             bind: bind
@@ -17,7 +18,6 @@
         return service;
 
         /////////////
-
         function bind(element, eventHandlers) {
             $(element).find('img').one('load', function() {
                 updateParallax(element, eventHandlers, true);
@@ -70,7 +70,7 @@
         }
     }
 
-    function parallaxScroll(parallaxService, $parse) {
+    function parallaxScroll(parallaxService, $parse, $window) {
         var directive = {
             link: link
         };
@@ -117,6 +117,10 @@
                         parallaxHandler(scope, { $event: event });
                     });
                 }
+            });
+
+            scope.$on('$destroy', function() {
+                $($window).off('scroll.parallax, resize.parallax');
             });
         }
     }
